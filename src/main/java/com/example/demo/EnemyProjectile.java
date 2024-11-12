@@ -1,31 +1,30 @@
 package com.example.demo;
 
 /**
- * The EnemyProjectile class represents a projectile fired by the EnemyPlane.
- * It moves horizontally across the screen with a specified velocity.
+ * Represents a projectile fired by the EnemyPlane.
+ * Moves horizontally across the screen with a set velocity.
  */
 public class EnemyProjectile extends Projectile {
 
-	/** The name of the image file used for the EnemyProjectile. */
+	/** Image file name for the EnemyProjectile. */
 	private static final String IMAGE_NAME = "enemyFire.png";
-	/** The height of the EnemyProjectile image. */
+	/** Image height for the EnemyProjectile. */
 	private static final int IMAGE_HEIGHT = 50;
-	/** The horizontal velocity of the EnemyProjectile, moving leftward. */
+	/** Horizontal velocity moving leftward for the EnemyProjectile. */
 	private static final int HORIZONTAL_VELOCITY = -10;
 
 	/**
-	 * Constructs an EnemyProjectile object with a specified initial position.
+	 * Constructs an EnemyProjectile with specified initial coordinates.
 	 *
-	 * @param initialXPos the initial x-coordinate of the EnemyProjectile
-	 * @param initialYPos the initial y-coordinate of the EnemyProjectile
+	 * @param initialXPos Initial x-coordinate of the EnemyProjectile.
+	 * @param initialYPos Initial y-coordinate of the EnemyProjectile.
 	 */
 	public EnemyProjectile(double initialXPos, double initialYPos) {
 		super(IMAGE_NAME, IMAGE_HEIGHT, initialXPos, initialYPos);
 	}
 
 	/**
-	 * Updates the position of the EnemyProjectile by moving it horizontally at a
-	 * constant velocity.
+	 * Moves the EnemyProjectile horizontally at a constant velocity.
 	 */
 	@Override
 	public void updatePosition() {
@@ -33,7 +32,7 @@ public class EnemyProjectile extends Projectile {
 	}
 
 	/**
-	 * Updates the state of the EnemyProjectile, including its position.
+	 * Updates the EnemyProjectile's state, including position.
 	 */
 	@Override
 	public void updateActor() {
